@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ==========================================================
+       PORTFOLIO — ISAAC NGINYA
+       Marketeur Digital & Fondateur d'E-digi Learning
+       HTML5 · CSS3 · JavaScript vanilla
+       ========================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaac Nginya — Marketeur Digital & Fondateur d'E-digi Learning</title>
+  <meta name="description" content="Isaac Nginya, marketeur digital basé à Douala (Cameroun) et fondateur d'E-digi Learning. Stratégie digitale, social media, publicité en ligne, SEO, e-mail marketing et analytics.">
+  <meta name="author" content="Isaac Nginya">
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph (partage sur les réseaux sociaux) -->
+  <meta property="og:title" content="Isaac Nginya — Marketeur Digital">
+  <meta property="og:description" content="Transmettre, innover et accompagner la performance digitale des marques.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/isaac-profil.jpg">
+
+  <!-- Favicon en SVG intégré (initiales IN) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111111'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='28' fill='%23F26B1D'%3EIN%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts : Syne (titres) + Inter (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Si JavaScript est désactivé : on affiche tout le contenu directement -->
+  <noscript>
+    <style>
+      .preloader { display: none !important; }
+      body.is-loading { overflow: auto !important; }
+      [data-reveal] { opacity: 1 !important; transform: none !important; }
+      .skill-card__bar span { width: var(--level) !important; }
+      .cursor { display: none !important; }
+    </style>
+  </noscript>
+
+  <!-- Script (chargé en différé) -->
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="is-loading">
+
+  <!-- Lien d'évitement (accessibilité clavier) -->
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- ==========================================================
+       PRELOADER — Initiales « IN » animées
+       ========================================================== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__pattern"></div>
+    <div class="preloader__inner">
+      <div class="preloader__logo">
+        <span class="preloader__letter">I</span>
+        <span class="preloader__letter">N</span>
+        <span class="preloader__dot"></span>
+      </div>
+      <div class="preloader__bar"><span></span></div>
+      <p class="preloader__text">Transmettre · Innover · Accompagner</p>
+    </div>
+  </div>
+
+  <!-- Barre de progression de lecture -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- Curseur personnalisé (desktop uniquement) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label">Voir</span></div>
+  </div>
+
+  <!-- ==========================================================
+       EN-TÊTE & NAVIGATION
+       ========================================================== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a href="#accueil" class="nav__logo" aria-label="Isaac Nginya, retour à l'accueil">
+        Isaac<span>.</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#accueil" class="nav__link is-active" data-index="01">Accueil</a></li>
+        <li><a href="#apropos" class="nav__link" data-index="02">À propos</a></li>
+        <li><a href="#competences" class="nav__link" data-index="03">Compétences</a></li>
+        <li><a href="#parcours" class="nav__link" data-index="04">Parcours</a></li>
+        <li><a href="#projets" class="nav__link" data-index="05">Projets</a></li>
+        <li><a href="#contact" class="nav__link" data-index="06">Contact</a></li>
+        <!-- Infos visibles uniquement dans le menu mobile plein écran -->
+        <li class="nav__mobile-info">
+          <a href="mailto:isaacnginya08@gmail.com">isaacnginya08@gmail.com</a>
+          <span>Douala, Cameroun</span>
+        </li>
+      </ul>
+
+      <a href="#contact" class="btn btn--dark btn--small nav__cta magnetic">
+        <span class="btn__label">Discutons</span>
+      </a>
+
+      <!-- Bouton burger (3 barres → X) -->
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ==========================================================
+         1. ACCUEIL (HERO)
+         ========================================================== -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <!-- Formes décoratives flottantes -->
+      <div class="shapes" aria-hidden="true">
+        <span class="shape shape--circle"></span>
+        <span class="shape shape--ring"></span>
+        <span class="shape shape--chevron"></span>
+        <span class="shape shape--dots"></span>
+        <span class="shape shape--triangle"></span>
+        <span class="shape shape--plus"></span>
+      </div>
+
+      <div class="container hero__grid">
+        <!-- Texte -->
+        <div class="hero__content">
+          <p class="hero__badge" data-reveal="fade-up">
+            <span class="pulse" aria-hidden="true"></span>
+            Douala, Cameroun · Disponible pour vos projets
+          </p>
+
+          <p class="hero__hello" data-reveal="fade-up" data-delay="100">Bonjour, je suis</p>
+
+          <h1 class="hero__name" id="hero-title" aria-label="Isaac Nginya">
+            <span class="hero__name-line" data-split>Isaac</span>
+            <span class="hero__name-line hero__name-line--accent" data-split>Nginya</span>
+          </h1>
+
+          <p class="hero__role" data-reveal="fade-up" data-delay="200">
+            <span class="hero__role-prefix">Je suis</span>
+            <span class="typewriter" id="typewriter"
+                  data-words='["Marketeur Digital","Formateur","Stratège Social Media"]'>Marketeur Digital</span><span class="typewriter__caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero__subtitle" data-reveal="fade-up" data-delay="250">
+            Marketeur Digital &amp; Fondateur d'<strong>E-digi Learning</strong>
+          </p>
+
+          <blockquote class="hero__quote" data-reveal="fade-up" data-delay="300">
+            « Transmettre, innover et accompagner la performance digitale des marques. »
+          </blockquote>
+
+          <div class="hero__actions" data-reveal="fade-up" data-delay="400">
+            <a href="#projets" class="btn btn--primary magnetic">
+              <span class="btn__label">Voir mes projets</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--outline magnetic">
+              <span class="btn__label">Me contacter</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visuel : photo dans un blob animé -->
+        <div class="hero__visual" data-reveal="scale" data-delay="200">
+          <div class="blob">
+            <div class="blob__back" aria-hidden="true"></div>
+            <div class="blob__outline" aria-hidden="true"></div>
+            <div class="blob__photo">
+              <img src="images/isaac-profil.jpg"
+                   alt="Isaac Nginya en tenue en pagne orange, blanc et noir, tenant son attestation de réussite en marketing digital du projet D-CLIC de l'OIF"
+                   width="900" height="1200" fetchpriority="high" decoding="async">
+            </div>
+            <!-- Chevrons inspirés du pagne -->
+            <svg class="blob__chevrons" viewBox="0 0 120 60" aria-hidden="true">
+              <path d="M0 20 L15 5 L30 20 L45 5 L60 20 L75 5 L90 20 L105 5 L120 20"/>
+              <path d="M0 40 L15 25 L30 40 L45 25 L60 40 L75 25 L90 40 L105 25 L120 40"/>
+              <path d="M0 60 L15 45 L30 60 L45 45 L60 60 L75 45 L90 60 L105 45 L120 60"/>
+            </svg>
+
+            <!-- Cartes flottantes -->
+            <div class="float-card float-card--top">
+              <span class="float-card__number">6+</span>
+              <span class="float-card__text">Certifications</span>
+            </div>
+            <div class="float-card float-card--bottom">
+              <span class="float-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+              </span>
+              <span>
+                <strong>E-digi Learning</strong>
+                <small>Fondateur</small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicateur de scroll animé -->
+      <a href="#apropos" class="scroll-indicator" aria-label="Défiler vers la section À propos">
+        <span class="scroll-indicator__mouse"><span class="scroll-indicator__wheel"></span></span>
+        <span class="scroll-indicator__text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- Bandeau défilant (marquee) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Stratégie digitale</span><i>✦</i>
+        <span>Social Media</span><i>✦</i>
+        <span>Facebook &amp; Instagram Ads</span><i>✦</i>
+        <span>SEO / SEA</span><i>✦</i>
+        <span>E-mail marketing</span><i>✦</i>
+        <span>Analytics</span><i>✦</i>
+        <span>Formation</span><i>✦</i>
+        <!-- Copie pour une boucle infinie sans coupure -->
+        <span>Stratégie digitale</span><i>✦</i>
+        <span>Social Media</span><i>✦</i>
+        <span>Facebook &amp; Instagram Ads</span><i>✦</i>
+        <span>SEO / SEA</span><i>✦</i>
+        <span>E-mail marketing</span><i>✦</i>
+        <span>Analytics</span><i>✦</i>
+        <span>Formation</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         2. À PROPOS
+         ========================================================== -->
+    <section class="section about" id="apropos" aria-labelledby="about-title">
+      <div class="shapes" aria-hidden="true">
+        <span class="shape shape--ring shape--about"></span>
+        <span class="shape shape--chevron shape--about-chevron"></span>
+      </div>
+
+      <div class="container">
+        <header class="section__head" data-reveal="fade-up">
+          <span class="section__tag">01 — À propos</span>
+          <h2 class="section__title" id="about-title">
+            Le digital au service de la <span class="highlight">performance</span> des marques.
+          </h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__lead" data-reveal="fade-up">
+              Passionné par le marketing digital, un univers qui redéfinit chaque jour les règles
+              de la communication et de la croissance des entreprises.
+            </p>
+            <p data-reveal="fade-up" data-delay="100">
+              J'ai développé une expertise solide en <strong>stratégie digitale</strong>,
+              <strong>publicité en ligne</strong>, <strong>SEO</strong>, <strong>e-mail marketing</strong>
+              et <strong>analytics</strong>. J'accompagne les marques, des petites boutiques aux
+              prestataires de services, pour transformer leur présence en ligne en résultats concrets.
+            </p>
+            <p data-reveal="fade-up" data-delay="200">
+              Convaincu que le savoir doit circuler, j'ai fondé <strong>E-digi Learning</strong>,
+              une plateforme de formation en ligne dédiée au marketing digital et à l'intelligence
+              artificielle. Mon objectif : <em>transmettre, innover et accompagner</em>.
+            </p>
+
+            <div class="about__traits" data-reveal="fade-up" data-delay="300">
+              <h3 class="about__traits-title">Mes atouts</h3>
+              <ul class="chips">
+                <li class="chip">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                  Méticuleux
+                </li>
+                <li class="chip">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                  Sens de la responsabilité
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Compteurs animés -->
+          <div class="about__stats">
+            <div class="stat" data-reveal="scale">
+              <span class="stat__number"><span class="counter" data-target="6">0</span>+</span>
+              <span class="stat__label">Certifications obtenues</span>
+            </div>
+            <div class="stat stat--orange" data-reveal="scale" data-delay="120">
+              <span class="stat__number"><span class="counter" data-target="3">0</span>+</span>
+              <span class="stat__label">Années d'expérience</span>
+            </div>
+            <div class="stat stat--dark" data-reveal="scale" data-delay="240">
+              <span class="stat__number"><span class="counter" data-target="4">0</span>+</span>
+              <span class="stat__label">Clients accompagnés</span>
+            </div>
+            <div class="stat stat--pattern" data-reveal="scale" data-delay="360">
+              <span class="stat__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+              </span>
+              <span class="stat__label"><strong>Prix du Génie Digital</strong> 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. COMPÉTENCES
+         ========================================================== -->
+    <section class="section skills" id="competences" aria-labelledby="skills-title">
+      <div class="skills__pattern" aria-hidden="true"></div>
+
+      <div class="container">
+        <header class="section__head section__head--light" data-reveal="fade-up">
+          <span class="section__tag">02 — Compétences</span>
+          <h2 class="section__title" id="skills-title">
+            Une boîte à outils <span class="highlight">360°</span> pour votre croissance.
+          </h2>
+        </header>
+
+        <!-- Les niveaux (--level) sont modifiables librement -->
+        <ul class="skills__grid">
+          <li class="skill-card" data-reveal="fade-up" style="--level: 92%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </span>
+            <h3 class="skill-card__title">Création de contenus</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>92%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Création de contenus" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="60" style="--level: 90%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+            </span>
+            <h3 class="skill-card__title">Gestion des réseaux sociaux</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>90%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Gestion des réseaux sociaux" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="120" style="--level: 88%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+            </span>
+            <h3 class="skill-card__title">Facebook &amp; Instagram Ads</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>88%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Facebook et Instagram Ads" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="180" style="--level: 87%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            </span>
+            <h3 class="skill-card__title">Stratégie marketing digital</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>87%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Stratégie marketing digital" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="240" style="--level: 82%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></svg>
+            </span>
+            <h3 class="skill-card__title">Audit digital</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>82%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Audit digital" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" style="--level: 80%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v2M11 11v6M15 8v9M19 5v12"/></svg>
+            </span>
+            <h3 class="skill-card__title">Analyse de données</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>80%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Analyse de données" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="60" style="--level: 78%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8M8 10.5h5M10.5 8v5"/></svg>
+            </span>
+            <h3 class="skill-card__title">SEO / SEA</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>78%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="SEO et SEA" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="120" style="--level: 82%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <h3 class="skill-card__title">E-mail marketing</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>82%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="E-mail marketing" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="180" style="--level: 76%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9Z"/></svg>
+            </span>
+            <h3 class="skill-card__title">Marketing d'influence</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>76%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="Marketing d'influence" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+
+          <li class="skill-card" data-reveal="fade-up" data-delay="240" style="--level: 80%">
+            <span class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m12 8 1.2 2.4 2.6.4-1.9 1.8.5 2.6L12 14l-2.4 1.2.5-2.6-1.9-1.8 2.6-.4Z"/></svg>
+            </span>
+            <h3 class="skill-card__title">E-réputation</h3>
+            <div class="skill-card__meta"><span>Maîtrise</span><span>80%</span></div>
+            <div class="skill-card__bar" role="progressbar" aria-label="E-réputation" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span></span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. PARCOURS (TIMELINE)
+         ========================================================== -->
+    <section class="section journey" id="parcours" aria-labelledby="journey-title">
+      <div class="shapes" aria-hidden="true">
+        <span class="shape shape--dots shape--journey"></span>
+        <span class="shape shape--triangle shape--journey-tri"></span>
+      </div>
+
+      <div class="container">
+        <header class="section__head" data-reveal="fade-up">
+          <span class="section__tag">03 — Parcours</span>
+          <h2 class="section__title" id="journey-title">
+            Formations, expériences &amp; <span class="highlight">distinctions</span>.
+          </h2>
+        </header>
+
+        <ol class="timeline" id="timeline">
+          <li class="timeline__item" data-reveal="slide-left">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Oct. 2025</time>
+                <span class="timeline__type timeline__type--award">Distinction</span>
+              </div>
+              <h3 class="timeline__title">Prix du Génie Digital</h3>
+              <p class="timeline__org">Digital College Cameroun · Douala</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-right">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Juin – Août 2025</time>
+                <span class="timeline__type timeline__type--work">Expérience</span>
+              </div>
+              <h3 class="timeline__title">Conseiller financier</h3>
+              <p class="timeline__org">Prudential Beneficial Life Insurance · Douala</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-left">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Mai 2025</time>
+                <span class="timeline__type">Formation</span>
+              </div>
+              <h3 class="timeline__title">Basics of Social Media</h3>
+              <p class="timeline__org">Uniathena · En ligne</p>
+              <p class="timeline__desc">Introduction au marketing numérique, SEO/SEM et stratégies avancées de marketing numérique.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-right">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Mars – Mai 2025</time>
+                <span class="timeline__type">Formation</span>
+              </div>
+              <h3 class="timeline__title">Concepts théoriques du marketing numérique</h3>
+              <p class="timeline__org">Oskul by Les Ateliers Pratiques · En ligne</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-left">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Janv. – Avr. 2025</time>
+                <span class="timeline__type">Formation</span>
+              </div>
+              <h3 class="timeline__title">Attestation de réussite en Marketing Digital</h3>
+              <p class="timeline__org">InchClass · Projet D-CLIC de l'OIF</p>
+              <p class="timeline__desc">Programme de l'Organisation internationale de la Francophonie : stratégie digitale, création de contenus, influence, e-réputation, social ads, e-mail marketing et analyse de données.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-right">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Janv. 2025</time>
+                <span class="timeline__type">Certification</span>
+              </div>
+              <h3 class="timeline__title">Strategy Marketing Certified &amp; Digital Marketing Fundamentals</h3>
+              <p class="timeline__org">Scrum Study · En ligne</p>
+              <p class="timeline__desc">Analyse SWOT, objectifs SMART, ciblage et positionnement, stratégie digitale, SEO/SEA et social media marketing.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-left">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Avr. – Juin 2024</time>
+                <span class="timeline__type timeline__type--work">Expérience</span>
+              </div>
+              <h3 class="timeline__title">Commercial</h3>
+              <p class="timeline__org">Tendance Scénic · Douala</p>
+              <p class="timeline__desc">Mise en place d'une stratégie de prospection, identification de nouvelles opportunités et organisation d'événements clients.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-right">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Mai – Juil. 2023</time>
+                <span class="timeline__type timeline__type--work">Expérience</span>
+              </div>
+              <h3 class="timeline__title">Stagiaire en marketing digital</h3>
+              <p class="timeline__org">Easy Consulting · Douala</p>
+              <p class="timeline__desc">Mise en place d'une stratégie de contenus et création de la ligne éditoriale.</p>
+            </article>
+          </li>
+
+          <li class="timeline__item" data-reveal="slide-left">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <article class="timeline__card">
+              <div class="timeline__top">
+                <time class="timeline__date">Oct. 2022 – Août 2023</time>
+                <span class="timeline__type">Formation</span>
+              </div>
+              <h3 class="timeline__title">Certificat d'apprentissage professionnel</h3>
+              <p class="timeline__org">GSVTI · Douala</p>
+              <p class="timeline__desc">Content marketing, inbound marketing, SMO/SMM, community management et politique marketing.</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         5. PROJETS
+         ========================================================== -->
+    <section class="section projects" id="projets" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head" data-reveal="fade-up">
+          <span class="section__tag">04 — Projets</span>
+          <h2 class="section__title" id="projects-title">
+            Des marques accompagnées, des <span class="highlight">résultats</span> concrets.
+          </h2>
+        </header>
+
+        <div class="projects__grid">
+          <!-- Projet 1 -->
+          <article class="project-card" data-reveal="fade-up" data-tilt>
+            <div class="project-card__media" data-initials="EL">
+              <img src="images/projet-1.jpg" alt="Aperçu de la plateforme E-digi Learning" loading="lazy" width="800" height="600">
+              <div class="project-card__overlay">
+                <p>Conception et lancement d'une plateforme de formation en ligne pour rendre le marketing digital et l'IA accessibles à tous.</p>
+                <a href="#contact" class="project-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">01</span>
+              <h3 class="project-card__title">E-digi Learning</h3>
+              <p class="project-card__desc">Plateforme de formation en marketing digital et intelligence artificielle.</p>
+              <ul class="tags">
+                <li>EdTech</li><li>Formation</li><li>IA</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-card" data-reveal="fade-up" data-delay="120" data-tilt>
+            <div class="project-card__media" data-initials="MM">
+              <img src="images/projet-2.jpg" alt="Identité visuelle de la boutique de mode MS MARIANNE" loading="lazy" width="800" height="600">
+              <div class="project-card__overlay">
+                <p>Création de l'identité visuelle et des logos, puis définition de la stratégie digitale pour développer la visibilité de la boutique.</p>
+                <a href="#contact" class="project-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">02</span>
+              <h3 class="project-card__title">MS MARIANNE</h3>
+              <p class="project-card__desc">Identité visuelle, logos et stratégie digitale d'une boutique de mode.</p>
+              <ul class="tags">
+                <li>Branding</li><li>Logo</li><li>Stratégie</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-card" data-reveal="fade-up" data-delay="60" data-tilt>
+            <div class="project-card__media" data-initials="QB">
+              <img src="images/projet-3.jpg" alt="Campagne publicitaire de Queen Beauty Services à Douala" loading="lazy" width="800" height="600">
+              <div class="project-card__overlay">
+                <p>Conception et pilotage d'une campagne publicitaire ciblée pour attirer de nouvelles clientes vers un salon de beauté de Douala.</p>
+                <a href="#contact" class="project-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">03</span>
+              <h3 class="project-card__title">Queen Beauty Services</h3>
+              <p class="project-card__desc">Campagne publicitaire pour un salon de beauté à Douala.</p>
+              <ul class="tags">
+                <li>Social Ads</li><li>Beauté</li><li>Acquisition</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Projet 4 -->
+          <article class="project-card" data-reveal="fade-up" data-delay="180" data-tilt>
+            <div class="project-card__media" data-initials="NMC">
+              <img src="images/projet-4.jpg" alt="Page Facebook du traiteur événementiel NMC Service" loading="lazy" width="800" height="600">
+              <div class="project-card__overlay">
+                <p>Élaboration de la stratégie marketing et éditoriale de la page Facebook d'un traiteur événementiel pour gagner en notoriété et en demandes de devis.</p>
+                <a href="#contact" class="project-card__link">
+                  En savoir plus
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__num">04</span>
+              <h3 class="project-card__title">NMC Service</h3>
+              <p class="project-card__desc">Stratégie marketing de la page Facebook d'un traiteur événementiel.</p>
+              <ul class="tags">
+                <li>Facebook</li><li>Contenus</li><li>Événementiel</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         6. CONTACT
+         ========================================================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__pattern" aria-hidden="true"></div>
+      <div class="shapes" aria-hidden="true">
+        <span class="shape shape--circle shape--contact"></span>
+      </div>
+
+      <div class="container contact__grid">
+        <!-- Informations -->
+        <div class="contact__info">
+          <header class="section__head section__head--light" data-reveal="fade-up">
+            <span class="section__tag">05 — Contact</span>
+            <h2 class="section__title" id="contact-title">
+              Parlons de votre <span class="highlight">projet</span>.
+            </h2>
+          </header>
+
+          <p class="contact__intro" data-reveal="fade-up" data-delay="100">
+            Une marque à faire grandir, une campagne à lancer ou une formation à organiser ?
+            Écrivez-moi, je vous réponds rapidement.
+          </p>
+
+          <a href="mailto:isaacnginya08@gmail.com" class="contact__mail" data-reveal="fade-up" data-delay="150">
+            <span class="contact__mail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <span>
+              <small>Écrivez-moi</small>
+              isaacnginya08@gmail.com
+            </span>
+          </a>
+
+          <!-- Numéro WhatsApp au format international : 237 + numéro -->
+          <a href="https://wa.me/237687015511?text=Bonjour%20Isaac%2C%20je%20viens%20de%20votre%20portfolio%20!"
+             class="btn btn--whatsapp magnetic" target="_blank" rel="noopener" data-reveal="fade-up" data-delay="200">
+            <svg class="btn__icon btn__icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.5 3.9 1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+            <span class="btn__label">Discuter sur WhatsApp</span>
+          </a>
+
+          <!-- Réseaux sociaux : remplacez les liens par vos vrais profils -->
+          <ul class="socials" data-reveal="fade-up" data-delay="250">
+            <li>
+              <a href="https://www.facebook.com/" class="socials__link" target="_blank" rel="noopener" aria-label="Facebook d'Isaac Nginya">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8V6.5c0-.8.2-1.5 1.5-1.5H17V2h-2.6C11.6 2 11 3.8 11 6v2H9v3h2v11h3V11h2.6l.4-3h-3Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" class="socials__link" target="_blank" rel="noopener" aria-label="Instagram d'Isaac Nginya">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3 0-4.1.1C4.3 2.2 2.2 4.3 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.1 3.6 2.2 5.7 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.6-.1 5.7-2.2 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1c-.1-3.6-2.2-5.7-5.8-5.8C15 2 14.7 2 12 2Zm0 1.8c2.7 0 3 0 4 .1 2.6.1 3.9 1.4 4 4 .1 1.1.1 1.4.1 4.1s0 3-.1 4c-.1 2.7-1.4 3.9-4 4-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.6-.1-3.9-1.4-4-4C3.8 15 3.8 14.7 3.8 12s0-3 .1-4c.1-2.6 1.4-3.9 4-4 1-.2 1.4-.2 4.1-.2Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" class="socials__link" target="_blank" rel="noopener" aria-label="LinkedIn d'Isaac Nginya">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5c0-1.2-.02-2.73-1.66-2.73-1.67 0-1.93 1.3-1.93 2.64V21h-4V9.75Z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulaire -->
+        <form class="contact__form" id="contactForm" novalidate data-reveal="slide-right" data-delay="100">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder=" " autocomplete="name" required>
+            <label for="name">Votre nom</label>
+            <span class="field__line" aria-hidden="true"></span>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
+            <label for="email">Votre adresse e-mail</label>
+            <span class="field__line" aria-hidden="true"></span>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">Votre message</label>
+            <span class="field__line" aria-hidden="true"></span>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block magnetic">
+            <span class="btn__label">Envoyer le message</span>
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg>
+          </button>
+
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       7. PIED DE PAGE
+       ========================================================== -->
+  <footer class="footer">
+    <div class="pagne-band" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <a href="#accueil" class="nav__logo footer__logo">Isaac<span>.</span></a>
+      <p class="footer__copy">© 2026 Isaac Nginya. Tous droits réservés. Conçu avec passion à Douala.</p>
+      <a href="#accueil" class="back-to-top magnetic" aria-label="Retour en haut de la page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
