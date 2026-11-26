@@ -1,0 +1,4 @@
+# Script de synchronisation automatique (local uniquement)
+auto-push.ps1
+auto-push.log
+.auto-push.pid
