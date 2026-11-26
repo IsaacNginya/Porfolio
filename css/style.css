@@ -1681,6 +1681,33 @@ body.is-loaded .char {
   margin-bottom: 1rem;
 }
 
+/* Liste des livrables d'un projet */
+.project-card__list {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+
+.project-card__list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.project-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.9rem;
+  height: 0.55rem;
+  border-left: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  transform: rotate(-45deg) scale(0.75);
+  transform-origin: center;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -2240,6 +2267,21 @@ body.is-loaded .char {
 
   .project-card--featured .project-card__title {
     font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  }
+
+  /* Variante inversée : texte à gauche, visuel à droite */
+  .project-card--reverse {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .project-card--reverse .project-card__media {
+    order: 2;
+    border-bottom: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .project-card--featured .project-card__media--logo img {
+    padding: 2rem;
   }
 
   .contact__grid {
