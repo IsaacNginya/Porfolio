@@ -1535,6 +1535,17 @@ body.is-loaded .char {
   transform: scale(1.05);
 }
 
+/* Variante logo : affiché en entier sur fond blanc, sans recadrage */
+.project-card__media--logo {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-card__media--logo img {
+  object-fit: contain;
+  padding: 1.25rem;
+}
+
 /* Visuel de remplacement si projet-X.jpg est absente */
 .project-card__media.no-img {
   display: grid;
