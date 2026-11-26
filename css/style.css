@@ -2095,6 +2095,11 @@ body.is-loaded .char {
     gap: 1.6rem;
   }
 
+  /* Projet phare (E-digi Learning) sur toute la largeur */
+  .project-card--featured {
+    grid-column: 1 / -1;
+  }
+
   .footer__inner {
     flex-direction: row;
     justify-content: space-between;
@@ -2192,6 +2197,28 @@ body.is-loaded .char {
 
   .projects__grid {
     gap: 2rem;
+  }
+
+  /* Projet phare : image à gauche, texte à droite */
+  .project-card--featured {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .project-card--featured .project-card__media {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+
+  .project-card--featured .project-card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+  }
+
+  .project-card--featured .project-card__title {
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
   }
 
   .contact__grid {
