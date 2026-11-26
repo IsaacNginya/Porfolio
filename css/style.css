@@ -1482,6 +1482,27 @@ body.is-loaded .char {
   font-size: 0.9rem;
 }
 
+/* Photo dans une carte du parcours (ex. remise de prix) */
+.timeline__photo {
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--blue-50);
+}
+
+.timeline__photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.timeline__card:hover .timeline__photo img {
+  transform: scale(1.03);
+}
+
 
 /* ==========================================================================
    14. PROJETS
