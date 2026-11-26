@@ -70,7 +70,7 @@
      ========================================================================== */
   function initPreloader(onDone) {
     const preloader = $("#preloader");
-    const MIN_TIME = reducedMotion ? 0 : 1900;
+    const MIN_TIME = reducedMotion ? 0 : 900;
     const MAX_TIME = 4500;
     const start = performance.now();
     let finished = false;
@@ -419,7 +419,7 @@
 
       if (!finePointer || reducedMotion) return;
 
-      const strength = 0.3;
+      const strength = 0.12;
       const label = $(".btn__label", element);
 
       element.addEventListener("mousemove", (event) => {
@@ -446,7 +446,7 @@
   function initTilt() {
     if (!finePointer || reducedMotion) return;
 
-    const MAX_ROTATION = 9; // en degrés
+    const MAX_ROTATION = 3; // en degrés (discret pour un rendu professionnel)
 
     $$("[data-tilt]").forEach((card) => {
       card.addEventListener("mouseenter", () => card.classList.add("is-tilting"));
@@ -581,7 +581,7 @@
   initScrollEffects();
   initMobileMenu();
   initActiveLinks();
-  initCursor();
+  // initCursor(); // curseur personnalisé désactivé dans le thème bleu & blanc
   initMagnetic();
   initTilt();
   initContactForm();
