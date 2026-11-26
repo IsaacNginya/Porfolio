@@ -2139,13 +2139,7 @@ body.is-loaded .char {
   }
 
   .projects__grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
-  }
-
-  /* Projet phare (E-digi Learning) sur toute la largeur */
-  .project-card--featured {
-    grid-column: 1 / -1;
   }
 
   .footer__inner {
@@ -2243,8 +2237,14 @@ body.is-loaded .char {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* 3 colonnes : projets phares sur toute la largeur, marques côte à côte */
   .projects__grid {
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .project-card--featured {
+    grid-column: 1 / -1;
   }
 
   /* Projet phare : image à gauche, texte à droite */
